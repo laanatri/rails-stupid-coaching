@@ -1,0 +1,18 @@
+<div class="content">
+  <h1>Stupid Coaching</h1>
+  <p class="first"><%= @question %></p>
+  <br>
+  <p class="sender">- You</p>
+  <br>
+  <br>
+  <% if @question === 'I am going to work' %>
+      <p class="first"> Great! </p>
+    <% elsif @question.include?('?') %>
+      <p class="first"> Silly question, get dressed and go to work! </p>
+    <% else %>
+      <p class="first"> I don't care, get dressed and go to work! </p>
+    <% end %>
+  <br>
+  <p class="sender">- Your coach</p>
+  <div class="btn"><%= link_to "Ask a new question", ask_path %></div>
+</div>
